@@ -1,0 +1,28 @@
+* {
+	/* Basics*/
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	background-color: lightgrey;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
