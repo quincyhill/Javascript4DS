@@ -1,8 +1,3 @@
-# Tasklist
+# Javascript For Data Science
 
-A todo list inspired by github projects to locally save todo's and whatnot
-with a sqlite3 database
-
-Future Kanban
-
-IndexedDB for storage
+A more comphrensive applied knowledge of javascript and its use in doing data science work and visualizations.
