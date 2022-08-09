@@ -78,6 +78,56 @@ Within the parenthesis, `let` creates a variable called `value` to iterate over 
 
 Finally, within the curly braces we perform our desired operation on every value.
 
-Note that we used `let` rather than the older `var` and `of` rather than `in`: the latter returns the indexes of the collection (e.g., 0, 1, 2), which has some traps for the unwary. Simlar to enumerate in python execpt its just the enum value.
+Note that we used `let` rather than the older `var` and `of` rather than `in`: the latter returns the keys of the collection (e.g., 0, 1, 2), which has some traps for the unwary.
+
+The `of` returns the values instead of the keys of `in`. This is important to know.
 
 Note that indexing starts from 0 rather than 1, and that indentation is optional and for readability purposes only. This may be different from the langauge that you're used to.
+
+#### Constants vs Variables.
+
+You should make things constants unless they really need to be variables because it's easier for both people and computers to keep track of things that are defined once and never change.
+
+After all this, the types themselves are somewhat anticlimactic. JavaScript's `boolean` type can be either `true` or `false`, though we will see below that other things can be treated as booleans.
+
+`undefined` means "hasn't been given a value", while `null` means "has a value, which is nothing".
+
+#### **Control Flow**
+
+We have already seen `for` loops and flat arrays, so let's have a look at nested arrays and conditionals, We start with arrays that contain other arrays, which are usually processed by nested loops.
+
+Javascript has some weird ideas for what things are truthy and falsy, also array are heterogeneous.
+
+#### Saftey Tip
+
+Always use `===` and `!==` when testing for equality and inequality in Javascript, `==` and `!=` do type conversion, which can do ugly suprises.
+
+We can interpolate values into a back-quoted string.
+
+#### **Objects**
+
+An object in JavaScript is a collection of key-value pairs. Equivalent to what in Python would be a dictionary.
+
+#### **Functions**
+
+An oddity in javascript is how nearly any type can be compared with other types which can result in just werid results.
+
+Alot of more modern javascript consists of callables or functions being assigned to a variable instead of denoting it `function` due to the former's odd interactions with other features of the langauge.
+
+Each function has scope no matter how its defined and all paramters and variables inside it are local to it only.
+
+#### Why arrow functions?
+
+The reasoning is to have a more shorthand way of writing functions, it also couldn't change the behavior of the old `function` without breaking legacy code and the web by extension.
+
+#### **Modules**
+
+As our programs grow larger, we will want to put code in multiple files. The unavoidable bad news is that JavaScript has several module systems.
+
+Node still uses on called CommonJS, but is converting to the modern standard called ES6, so what we use on the command line is different from what we use in the browser (for now).
+
+JavaScript's offical name is ECMASCript, though only people who use the word "datum" in every conversation ever call it that. Successive versions of the language are therfore known as ES5, ES6, and so on, except when they're referred to as (for example) ES2018.
+
+Since we're doing JavaScript using node before the browser, we will be using its module system first.
+
+We will start by putting this code into a file named `utilities.js`
